@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, Switch } from "react-router-dom";
 import React from 'react';
 import Home from "./pages/Home";
 import About from "./pages/About";
 import ContactUs from './pages/ContactUs';
+import SubmittedForm from './pages/FormSubmitted';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route exact path="/form-submitted" element={<SubmittedForm />} />
         </Routes>
       </Router>
     </React.Fragment>
